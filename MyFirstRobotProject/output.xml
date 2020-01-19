@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200112 22:57:16.925" rpa="false">
+<suite id="s1" name="MyFirstRobotProject" source="C:\Workspace_Python\MyFirstRobotProject">
+<suite id="s1-s1" name="Test" source="C:\Workspace_Python\MyFirstRobotProject\Test">
+<suite id="s1-s1-s1" name="TestSuite1" source="C:\Workspace_Python\MyFirstRobotProject\Test\TestSuite1.robot">
+<test id="s1-s1-s1-t1" name="Login Test">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200112 22:57:17.213" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<status status="PASS" starttime="20200112 22:57:17.212" endtime="20200112 22:57:25.461"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200112 22:57:25.461" endtime="20200112 22:57:26.608"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200112 22:57:26.609" endtime="20200112 22:57:26.612"></status>
+</kw>
+<kw name="LoginK">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>id=email</arg>
+</arguments>
+<status status="PASS" starttime="20200112 22:57:26.614" endtime="20200112 22:57:26.727"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=email</arg>
+<arg>@{Credentials}[0]</arg>
+</arguments>
+<msg timestamp="20200112 22:57:26.729" level="INFO">Typing text 'hmandimarwa@live.fr' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20200112 22:57:26.729" endtime="20200112 22:57:26.985"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>id=pass</arg>
+</arguments>
+<status status="PASS" starttime="20200112 22:57:26.985" endtime="20200112 22:57:27.054"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=pass</arg>
+<arg>&amp;{Variables}[password]</arg>
+</arguments>
+<msg timestamp="20200112 22:57:27.055" level="INFO">Typing password into text field 'id=pass'.</msg>
+<status status="PASS" starttime="20200112 22:57:27.055" endtime="20200112 22:57:27.307"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=u_0_b</arg>
+</arguments>
+<msg timestamp="20200112 22:57:27.309" level="INFO">Clicking button 'id=u_0_b'.</msg>
+<status status="PASS" starttime="20200112 22:57:27.308" endtime="20200112 22:57:38.050"></status>
+</kw>
+<status status="PASS" starttime="20200112 22:57:26.613" endtime="20200112 22:57:38.051"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200112 22:57:41.055" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200112 22:57:38.051" endtime="20200112 22:57:41.057"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<msg timestamp="20200112 22:57:41.063" level="INFO">Login Test</msg>
+<status status="PASS" starttime="20200112 22:57:41.059" endtime="20200112 22:57:41.065"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//html[@id='facebook']//div[@id='userNav']//li//div[@class='linkWrap noCount']</arg>
+</arguments>
+<assign>
+<var>${Value}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200112 22:57:53.142" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=79.0.3945.117)
+</msg>
+<status status="FAIL" starttime="20200112 22:57:47.104" endtime="20200112 22:57:53.142"></status>
+</kw>
+<msg timestamp="20200112 22:57:53.143" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=79.0.3945.117)
+</msg>
+<msg timestamp="20200112 22:57:53.148" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=79.0.3945.117)
+</msg>
+<status status="FAIL" starttime="20200112 22:57:41.068" endtime="20200112 22:57:53.148"></status>
+</kw>
+<status status="FAIL" starttime="20200112 22:57:17.211" endtime="20200112 22:57:53.149" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=79.0.3945.117)
+</status>
+</test>
+<status status="FAIL" starttime="20200112 22:57:17.003" endtime="20200112 22:57:53.150"></status>
+</suite>
+<status status="FAIL" starttime="20200112 22:57:17.000" endtime="20200112 22:57:53.153"></status>
+</suite>
+<status status="FAIL" starttime="20200112 22:57:16.968" endtime="20200112 22:57:53.156"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="MyFirstRobotProject">MyFirstRobotProject</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Test">MyFirstRobotProject.Test</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="TestSuite1">MyFirstRobotProject.Test.TestSuite1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200112 22:57:53.143" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=79.0.3945.117)
+</msg>
+</errors>
+</robot>
