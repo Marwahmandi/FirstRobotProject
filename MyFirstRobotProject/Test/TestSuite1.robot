@@ -30,7 +30,7 @@ Login Test
     Sleep    3  
     Log   ${TEST_NAME}     
     ${Value} =  Get Text    xpath=//html[@id='facebook']//div[@id='userNav']//li//div[@class='linkWrap noCount']
-    Should Be Equal    ${Value}    Marwa Hm
+    Should Be Equal    ${Value}    Marwa Hmandi
     Close Browser    
     
 
